@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7318f64cd65d6004aa370b60fb93cc00
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SERPENTS FREE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 719f884ca70d5a7468b96d7782eec6ba, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
