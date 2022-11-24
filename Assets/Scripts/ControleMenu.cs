@@ -13,7 +13,7 @@ public class ControleMenu : MonoBehaviour
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
     public bool narrador;
-    public Button jogar, voltar, controles;
+    public Button jogar, voltar, controles, sair;
 
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class ControleMenu : MonoBehaviour
         actions.Add("Narrador", Narrador);
         actions.Add("Voltar", Voltar);
         actions.Add("Controles", Controles);
-
+        actions.Add("Sair", Sair);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
@@ -71,11 +71,24 @@ public class ControleMenu : MonoBehaviour
         controles.onClick.Invoke();
     }
 
+    private void Sair()
+    {
+        sair.onClick.Invoke();
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
             Narrador();
         narrador = (PlayerPrefs.GetInt("Narrador") != 0);
+    }
+
+    private void OnDestroy()
+    {
+        if (keywordRecognizer != null)
+        {
+            keywordRecognizer.Stop();
+            keywordRecognizer.Dispose();
+        }
     }
 }

@@ -12,15 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3061dea8ceb1b434482b943606f503f0
   - enabled: 1
-    path: Assets/Scenes/LevelBeta.unity
-    guid: a22735f8d92194345a6c0a2ce7bc501f
-  - enabled: 1
-    path: Assets/Scenes/Fase 2.unity
-    guid: fc95ea99332a45f46adf6a35564bb8d0
-  - enabled: 1
     path: Assets/Scenes/Fase 1.unity
     guid: d8c134a77915b4ff4adead7a39a2a750
   - enabled: 1
+    path: Assets/Scenes/Fase 2.unity
+    guid: d37c9515f634abb4eb97b11c4b915fd3
+  - enabled: 1
     path: Assets/Scenes/Fase 3.unity
-    guid: 8e9342d5bfa7849ebb0a73842446c2cb
+    guid: 933a363418cef4c1ca8c8948f1c4322f
+  - enabled: 1
+    path: Assets/Scenes/Fase 4.unity
+    guid: 8000fb24d8cb34e4592180cb0782b1a6
+  - enabled: 1
+    path: Assets/Scenes/Fase 5.unity
+    guid: 65e8edf08234d314290f941f9c1b1c41
+  - enabled: 1
+    path: Assets/Scenes/Atlantida.unity
+    guid: ae3e392d95b5a984c80e1478098e1861
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/LevelBeta.unity
+    guid: a22735f8d92194345a6c0a2ce7bc501f
+  - enabled: 0
+    path: Assets/Scenes/LevelBeta2.unity
+    guid: fc95ea99332a45f46adf6a35564bb8d0
   m_configObjects: {}

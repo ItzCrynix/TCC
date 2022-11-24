@@ -7,13 +7,16 @@ using UnityEngine.Windows.Speech;
 
 public class AndarTiles : MonoBehaviour
 {
+    // Controle a velocidade do jogador
     public float moveSpeed = 5f;
     public Transform movePoint;
 
     public GameObject pergaminho;
 
+    // Layer responsável por interromper o movimento do jogador caso não seja possível andar até lá
     public LayerMask pararMovimento;
 
+    // Cooldown para os sons de tocar na parede
     public float cooldownSomHoriz = 1f;
     private float cooldownTimerHoriz = Mathf.Infinity;
 
@@ -25,21 +28,23 @@ public class AndarTiles : MonoBehaviour
     public bool cima = false;
     public bool baixo = false;
 
+    // Reconhecimento de voz por meio do UnityEngine.Windows.Speech;
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
+    // narrador, uma variável de playerPrefs que armazena se o narrador está ativo ou não
     public bool narrador;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Adiciona as ações a serem realizadas com a fala
         actions.Clear();
         actions.Add("Direita", Direita);
         actions.Add("Esquerda", Esquerda);
         actions.Add("Cima", Cima);
         actions.Add("Baixo", Baixo);
         actions.Add("Narrador", Narrador);
-
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
@@ -50,6 +55,7 @@ public class AndarTiles : MonoBehaviour
 
     private void Awake()
     {
+        // atribui a variavel narrador o valor da variavel global do playerPrefs com a chave narrador
         narrador = (PlayerPrefs.GetInt("Narrador") != 0);
     }
 
@@ -246,5 +252,14 @@ public class AndarTiles : MonoBehaviour
         }
         cooldownTimerVert += Time.deltaTime;
         cooldownTimerHoriz += Time.deltaTime;
+    }
+
+    private void OnDestroy()
+    {
+        if (keywordRecognizer != null)
+        {
+            keywordRecognizer.Stop();
+            keywordRecognizer.Dispose();
+        }
     }
 }

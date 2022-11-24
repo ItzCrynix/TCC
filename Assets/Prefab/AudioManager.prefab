@@ -206,5 +206,55 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  submarino: {fileID: 7128693866564535594, guid: 0a530be5ba5dcaf4199ec8fa046cefff, type: 3}
-  listener: {fileID: 5798298561189740946, guid: 0d8ced988c219e740bd5cd4f781f935a, type: 3}
+  - name: HistoriaParte2
+    clip: {fileID: 8300000, guid: f8c87f2d21db847a387f942bb1ea6790, type: 3}
+    volume: 0.7
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: HistoriaParte3
+    clip: {fileID: 8300000, guid: 45738fc9d8d9a094aab8536466350903, type: 3}
+    volume: 0.7
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: HistoriaParte4
+    clip: {fileID: 8300000, guid: b73d60c23588dbd46bbda0cde8904bae, type: 3}
+    volume: 0.7
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: HistoriaParte5
+    clip: {fileID: 8300000, guid: 625f9686d0e8e9b45b5cc74caf643344, type: 3}
+    volume: 0.7
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: HistoriaFim
+    clip: {fileID: 8300000, guid: 2f7a41e42387c9c40b98e9e2d344688f, type: 3}
+    volume: 0.7
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  submarino: {fileID: 0}
+  listener: {fileID: 0}
